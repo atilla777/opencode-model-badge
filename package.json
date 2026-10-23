@@ -1,0 +1,18 @@
+{
+  "name": "opencode-model-badge",
+  "version": "0.1.0",
+  "description": "A reactive color and icon badge for the selected model in OpenCode V2",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./tui": "./tui.tsx"
+  },
+  "files": ["tui.tsx", "badge.mjs", "README.md", "LICENSE", "cli.example.json"],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atilla777/opencode-model-badge.git"
+  }
+}
