@@ -1,6 +1,6 @@
 {
   "name": "opencode-model-badge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A reactive project and model badge for OpenCode V2",
   "license": "MIT",
   "type": "module",

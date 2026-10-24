@@ -6,7 +6,7 @@ uppercase with its own color, followed by a colored marker, an icon, the model's
 real display name, and its selected reasoning variant (when set):
 
 ```text
-▌ PLUMS │ ▌ 🐋 DeepSeek V4.1 Flash · max
+PLUMS ▌ 🐋 DeepSeek V4.1 Flash · max
 ```
 
 The badge appears **above the session input** and in the **home-screen footer**.
@@ -27,8 +27,8 @@ always come from OpenCode's catalog; the plugin never renames models.
 
 The project name is taken from OpenCode's project metadata, falling back to the
 basename of the project's canonical directory (worktrees therefore show the main
-repository name). It is displayed in uppercase, before the model badge, separated
-by a muted `│`.
+repository name). It is displayed in uppercase, before the model badge; the
+model's own colored marker separates the two.
 
 The project color is derived automatically from the project name with a stable
 hash, so the same project always gets the same color in every session on every

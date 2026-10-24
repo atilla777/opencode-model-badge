@@ -19,13 +19,10 @@ export default Plugin.define({
       return (
         <box flexDirection="row" paddingLeft={1} paddingRight={1} flexShrink={0}>
           {currentProject ? (
-            <text fg={currentProject.color}>{`▌ ${currentProject.label}`}</text>
-          ) : null}
-          {currentProject && model ? (
-            <text fg={context.theme.text.muted}> │ </text>
+            <text fg={currentProject.color}>{currentProject.label}</text>
           ) : null}
           <text fg={model?.color ?? "#94A3B8"}>
-            {model ? `▌ ${model.icon ? `${model.icon} ` : ""}${model.name}` : ""}
+            {model ? `${currentProject ? " " : ""}▌ ${model.icon ? `${model.icon} ` : ""}${model.name}` : ""}
           </text>
           <text fg={context.theme.text.muted}>
             {model?.variant ? ` · ${model.variant}` : ""}
