@@ -2,11 +2,12 @@
 
 A small **OpenCode V2 terminal plugin** that makes your current project and
 selected model easy to recognize at a glance. Shows the project name in
-uppercase with its own color, followed by a colored marker, an icon, the model's
-real display name, and its selected reasoning variant (when set):
+uppercase with its own colored marker, followed by the model's colored marker,
+an icon, the model's real display name, and its selected reasoning variant
+(when set):
 
 ```text
-PLUMS ▌ 🐋 DeepSeek V4.1 Flash · max
+▌ PLUMS ▌ 🐋 DeepSeek V4.1 Flash · max
 ```
 
 The badge appears **above the session input** and in the **home-screen footer**.
