@@ -1,12 +1,17 @@
 # OpenCode Model Badge
 
-A small **OpenCode V2 terminal plugin** that makes your selected model easy to
-recognize at a glance. Shows a colored marker, an icon, the model's real display
-name, and its selected reasoning variant (when set).
+A small **OpenCode V2 terminal plugin** that makes your current project and
+selected model easy to recognize at a glance. Shows the project name in
+uppercase with its own color, followed by a colored marker, an icon, the model's
+real display name, and its selected reasoning variant (when set):
+
+```text
+▌ PLUMS │ ▌ 🐋 DeepSeek V4.1 Flash · max
+```
 
 The badge appears **above the session input** and in the **home-screen footer**.
-It updates immediately when you switch models, without sending a message.
-Your existing theme stays unchanged.
+It updates immediately when you switch projects or models, without sending a
+message. Your existing theme stays unchanged.
 
 | Default model | Icon | Color |
 | --- | --- | --- |
@@ -17,6 +22,21 @@ Your existing theme stays unchanged.
 
 Any number of other models, colors, and icons can be configured. Model names
 always come from OpenCode's catalog; the plugin never renames models.
+
+## Project label
+
+The project name is taken from OpenCode's project metadata, falling back to the
+basename of the project's canonical directory (worktrees therefore show the main
+repository name). It is displayed in uppercase, before the model badge, separated
+by a muted `│`.
+
+The project color is derived automatically from the project name with a stable
+hash, so the same project always gets the same color in every session on every
+machine. Different projects normally get different colors; with a very large
+number of projects two names can occasionally land on similar hues. The hue
+ranges of the default blue and yellow model colors are skipped, so the project
+label remains visually distinct from the model badge. No configuration is
+needed, and project colors are not customizable.
 
 ## Install
 
@@ -115,8 +135,9 @@ npm test
 ```
 
 Tests cover defaults, custom styles, provider precedence, real catalog names,
-missing catalog data, and option validation. They require no dependencies and
-make no model requests. The plugin adds no telemetry, network calls, or server hooks.
+missing catalog data, project-name derivation, stable project colors, and option
+validation. They require no dependencies and make no model requests. The plugin
+adds no telemetry, network calls, or server hooks.
 
 ## References
 
